@@ -1,0 +1,220 @@
+/* configurações gerais da página */
+body {
+  margin: 0;
+  background: #112 url(images/stars2.jpg) repeat;
+  background-size: 75%;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+p {
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.25em;
+  font-family: "Space Mono", monospace;
+}
+
+/* fundo de estrelas esmaecendo */
+body::before,
+body::after {
+  content: " ";
+  display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: transparent url(images/twinkling.png) repeat;
+  background-size: 20%;
+  animation: move-twink-back 500s linear infinite;
+}
+
+body::after {
+  animation-direction: reverse;
+}
+
+@keyframes move-twink-back {
+  from {  background-position: 0 0; }
+  to   {  background-position: -10000px 5000px; }
+}
+
+/* muda a cor da seleção para um azul bacana */
+*::selection {
+  background-color: #6dacff;
+}
+
+/* layout do cabeçalho da página */
+header {
+  background-color: rgba(255, 255, 255, .1);
+  padding: 0 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: chegando-de-cima 700ms cubic-bezier(0.18, 0.62, 0.22, 1) 0ms 1 forwards;
+}
+
+header * {
+  transform: translate3d(0,-100%, 0);
+  animation: chegando-de-cima 700ms cubic-bezier(0.18, 0.62, 0.22, 1) 200ms 1 forwards;
+}
+
+header :nth-child(2n+1) {
+  animation-delay: 200ms;
+}
+
+header :nth-child(2n) {
+  animation-delay: 400ms;
+}
+
+header ul :nth-child(2n+1) {
+  animation-delay: 600ms;
+}
+
+header ul :nth-child(2n) {
+  animation-delay: 800ms;
+}
+
+@keyframes chegando-de-cima {
+  from  {
+    opacity: 0.2;
+    transform: translate3d(0, -100%, 0);
+  }
+  to  {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* estilizando o menu superior */
+#logo {
+  float: left;
+  height: 1.25em;
+  margin-right: 0.5em;
+}
+
+#menu-principal ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid rgba(0, 0, 0, .2);
+  border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+#menu-principal li {
+  display: inline-block;
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  border-left: 1px solid rgba(255, 255, 255, .1);
+  border-right: 1px solid rgba(0, 0, 0, .2);
+}
+
+#menu-principal a {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em 0.75em;
+  color: currentColor;
+  text-decoration: none;
+}
+
+#menu-principal a::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.05;
+  transition: opacity 200ms ease;
+}
+
+#menu-principal a:hover::before {
+  opacity: 0.25;
+}
+
+#menu-principal li:nth-child(1) a::before {
+  background-color: #128fff;
+}
+
+#menu-principal li:nth-child(2) a::before {
+  background-color: #d012ff;
+}
+
+/* layout do conteúdo principal da página */
+main {
+  padding: 1em;
+}
+
+.aba-conteudo {
+  display: none;
+}
+
+.aba-conteudo.ativa {
+  display: block;
+}
+
+/* estilos do exercício dos aliens */
+#aliens p {
+  white-space: nowrap;
+  height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#aliens p.expandido {
+  white-space: normal;
+  height: auto;
+}
+
+.botao-expandir-retrair {
+  box-sizing: content-box;
+  height: .9em;
+  width: .9em;
+  padding: 0;
+  margin-right: .5em;
+}
+
+/* estilos do exercício philae */
+#galeria {
+  margin: 0 auto;
+}
+
+#galeria, #slide {
+  width: 400px;
+  height: 300px;
+}
+
+#slide {
+  border: 1px solid gray;
+}
+
+.controle {
+  width: 150px;
+  height: 45px;
+  padding: 6px 10px;
+  border: 1px solid #999;
+  background-image: linear-gradient(to bottom, #ddf, #bbe);
+  transition: all 100ms ease-out;
+}
+.controle:hover {
+  border-color: #aaa;
+  background-image: linear-gradient(to bottom, #eef, #ccf);
+  font-size: 120%;
+  cursor: pointer;
+}
+
+#anterior {
+  float: left;
+}
+
+#proximo {
+  float: right;
+}

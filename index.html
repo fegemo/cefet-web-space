@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exploração Espacial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Space+Mono">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="images/favicon.png">
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="images/alien-icon.png" id="logo"
+          alt="Ícone com o rosto de um alien">
+        Exploração Espacial
+      </h1>
+      <nav id="menu-principal">
+        <ul>
+          <li><a href="#aliens">Sobre Aliens</a></li>
+          <li><a href="#philae">Sobre a Philae</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="aliens" class="aba-conteudo ativa">
+        <!-- Exercício 1: fazer o código JavaScript da retração/expansão
+             dos parágrafos -->
+        <h1>Sobre Aliens</h1>
+        <h2>De onde eles vêm</h2>
+        <p>
+          <button class="botao-expandir-retrair" type="button">+</button>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in
+          dignissim augue. Nunc a erat ac nisl imperdiet dapibus sit amet
+          in ipsum. Suspendisse scelerisque in dui in placerat. Praesent
+          ornare est dolor, at pharetra mauris finibus in. Aenean vulputate,
+          massa ut molestie tincidunt, eros mi pulvinar sem, lobortis
+          efficitur dolor turpis eget velit. Donec non metus ante. Nam
+          quis quam quis magna laoreet ultricies. Duis non ex maximus,
+          congue augue nec, lobortis magna. Sed et tristique ex, non iaculis
+          libero. In tincidunt dolor at metus lacinia semper eu quis
+          enim. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos himenaeos.
+        </p>
+        <h2>O que eles querem</h2>
+        <p>
+          <button class="botao-expandir-retrair" type="button">+</button>
+          Cras velit mauris, suscipit ac blandit sit amet, scelerisque eget
+          sem. Aenean purus leo, tincidunt consectetur libero id, euismod
+          ultrices diam. Nam erat purus, faucibus ut nisl in, facilisis
+          venenatis mauris. Praesent maximus vulputate euismod. Fusce
+          eget lacinia nisi. Aenean eu ornare leo. Maecenas risus justo,
+          ornare ac orci quis, ultrices tincidunt tortor. Nunc sodales
+          magna non lorem bibendum sollicitudin. In porta, velit cursus
+          consectetur finibus, diam magna porta lorem, posuere ullamcorper
+          eros nulla auctor nibh. Ut fermentum diam magna, eu luctus libero
+          mattis vitae. Sed laoreet lorem vel orci dictum, eu sodales nisi
+          scelerisque. Maecenas vestibulum dapibus fermentum. Donec auctor
+          mauris nulla, eget sagittis sem molestie nec.
+        </p>
+        <h2>Para onde eles vão</h2>
+        <p>
+          <button class="botao-expandir-retrair" type="button">+</button>
+          Vestibulum auctor orci lacus, sit amet pretium mauris viverra
+          nec. Nullam eu maximus augue. Phasellus in metus sit amet sem dapibus
+          iaculis ut at odio. Cras turpis dui, lacinia non posuere quis,
+          posuere id mi. Etiam nisi erat, aliquet at libero at, porta pretium
+          ligula. Duis faucibus massa id metus venenatis posuere ac vitae
+          nulla. Praesent quis dui non metus hendrerit pretium. Nunc sit amet
+          purus dapibus, consequat augue a, pulvinar mi. Morbi fermentum
+          egestas dignissim. Suspendisse vulputate nibh sem, a aliquet
+          lorem porta ac.
+        </p>
+      </article>
+      <article id="philae" class="aba-conteudo">
+        <!-- Exercício 2: fazer o código JavaScript da galeria -->
+        <h1>Sobre a Philae</h1>
+        <p>
+          Philae é uma sonda robótica pousadora da Agência Espacial Europeia
+          que integra a sonda espacial Rosetta, construída para fazer o
+          primeiro pouso controlado no núcleo de um cometa do Sistema Solar,
+          o 67P/Churyumov-Gerasimenko.
+        </p>
+        <div id="galeria">
+          <img src="http://fegemo.github.io/cefet-web/images/philae-parts.jpg" id="slide">
+          <button id="anterior" class="controle">Anterior</button>
+          <button id="proximo" class="controle">Próximo</button>
+        </div>
+      </article>
+    </main>
+    <script src="navegacao.js"></script>
+    <script src="exercicio2.js"></script>
+  </body>
+</html>
