@@ -164,9 +164,12 @@ main {
 /* estilos do exercício dos aliens */
 #aliens p {
   white-space: nowrap;
-  height: 1em;
+  height: 1.2em;
+  font-size: 1em;
+  line-height: 1.2em;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #aliens p.expandido {
@@ -175,11 +178,14 @@ main {
 }
 
 .botao-expandir-retrair {
-  box-sizing: content-box;
-  height: .9em;
-  width: .9em;
+  box-sizing: border-box;
+  height: 1em;
+  width: 1em;
   padding: 0;
-  margin-right: .5em;
+  margin: 0 .5em 0 0;
+  font-size: inherit;
+  line-height: 1em;
+  border-width: 1px;
 }
 
 /* estilos do exercício philae */
