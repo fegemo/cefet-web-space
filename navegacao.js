@@ -16,7 +16,7 @@ itensDoMenu.forEach(function(el) {
   el.addEventListener('click', function(evento) {
     // descobre quem foi clicado e qual era o href do link e para que id
     // ele apontava
-    const hrefDoLink = event.target.href;
+    const hrefDoLink = evento.target.href;
     const idApontadoPeloLink = hrefDoLink.substr(hrefDoLink.lastIndexOf('#'));
 
     exibeArtigo(idApontadoPeloLink);
