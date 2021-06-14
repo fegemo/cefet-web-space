@@ -2,29 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Exploração Espacial</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Space+Mono&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="images/favicon.png">
   </head>
   <body>
     <header>
       <h1>
-        <img src="images/alien-icon.png" id="logo"
-          alt="Ícone com o rosto de um alien">
+        <img src="images/alien-icon.png" id="logo" alt="Ícone com o rosto de um alien">
         Exploração Espacial
       </h1>
       <nav id="menu-principal">
         <ul>
+          <li><a href="#gravitacao">Gravitação</a></li>
+          <li><a href="#osiris-rex">Sonda Osiris-Rex</a></li>
           <li><a href="#aliens">Sobre Aliens</a></li>
-          <li><a href="#philae">Sobre a Philae</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <article id="aliens" class="aba-conteudo ativa">
-        <!-- Exercício 1: fazer o código JavaScript da retração/expansão
-             dos parágrafos -->
+      <!-- Exercício 1: calcular a gravitação universal -->
+      <article id="gravitacao" class="aba-conteudo ativa">
+        <h1>Lei da Gravitação</h1>
+        <div class="colunas">
+          <div class="coluna">
+            <p>
+              A gravitação universal é uma força fundamental de atração que age entre todos os objetos, de acordo
+              com a quantidade de matéria de que são constituídos (massa).
+            </p>
+            <p>
+              A fórmula de cálculo da força de atração entre dois corpos é $$F_{grav}=\frac{GM_1M_2}{d^2},$$
+              onde \(F_{grav}\) é a força gravitacional, \(G\) é a constance de gravitação universal, \(M_1\)
+              e \(M_2\) são as massas dos dois corpos e \(d\) é a distância entre o centro dos objetos.
+            </p>
+          </div>
+          <div class="coluna">
+            <p>Para calcular a força entre dois corpos, use os controles a seguir:</p>
+            <div class="controles">
+              <label>
+                \(G\): <input type="number" id="constante" value="6.67e-11" disabled>
+              </label>
+              <label>
+                \(M_1\): <input type="number" id="massa1">
+              </label>
+              <label>
+                \(M_2\): <input type="number" id="massa2">
+              </label>
+              <label>
+                \(d\): <input type="number" id="distancia">
+              </label>
+            </div>
+            <div class="controles">
+              <label>
+                Resultado: <input type="number" id="resultado" disabled>
+              </label>
+              <button id="calcular">Calcular \(F_{grav}\)</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Exercício 2: fazer o código JavaScript da galeria -->
+      <article id="osiris-rex" class="aba-conteudo">
+        <h1>Sonda Osiris-Rex</h1>
+        <p>
+          A sonda Osiris-Rex, lançada pela Nasa em 2016, viajou mais
+          de 320 mil quilômetros até chegar aos arredores do asteroide
+          Bennu em dezembro 2018. Desde então, sua missão foi mapear
+          toda a extensão do grande pedregulho – 500 metros (à título
+          de comparação, a Torre Eiffel mede 300 metros) – e, com
+          as imagens, bolar um mapa detalhado de sua superfície.
+        </p>
+        <div id="galeria">
+          <img src="http://fegemo.github.io/cefet-web/images/osiris/modelo-artistico-da-sonda.webp" id="slide">
+          <button id="anterior" class="navegar">Anterior</button>
+          <button id="proximo" class="navegar">Próximo</button>
+        </div>
+      </article>
+
+      <!-- Exercício 3: fazer o código JavaScript da retração/expansão dos parágrafos -->
+      <article id="aliens" class="aba-conteudo">
         <h1>Sobre Aliens</h1>
         <h2>De onde eles vêm</h2>
         <p>
@@ -70,24 +130,41 @@
           egestas dignissim. Suspendisse vulputate nibh sem, a aliquet
           lorem porta ac.
         </p>
-      </article>
-      <article id="philae" class="aba-conteudo">
-        <!-- Exercício 2: fazer o código JavaScript da galeria -->
-        <h1>Sobre a Philae</h1>
+        <h2>O que comem</h2>
         <p>
-          Philae é uma sonda robótica pousadora da Agência Espacial Europeia
-          que integra a sonda espacial Rosetta, construída para fazer o
-          primeiro pouso controlado no núcleo de um cometa do Sistema Solar,
-          o 67P/Churyumov-Gerasimenko.
+          <button class="botao-expandir-retrair" type="button">+</button>
+          Quisquam veritatis dicta eligendi fuga asperiores tenetur, laborum 
+          repudiandae consequatur dignissimos corporis excepturi minus voluptas
+          consequuntur et dolorem odio optio ab error. Soluta vitae eaque,
+          blanditiis at autem dolore odio, aspernatur animi quibusdam nesciunt
+          debitis necessitatibus quod eius minus eos laborum asperiores culpa
+          obcaecati. Facilis excepturi obcaecati alias nisi maiores adipisci
+          rem, aliquid voluptatem dolor blanditiis quibusdam itaque neque
+          numquam et velit illum fuga magnam eius, dicta ut omnis.
+          Iure dolore accusamus natus necessitatibus?
         </p>
-        <div id="galeria">
-          <img src="http://fegemo.github.io/cefet-web/images/philae-parts.jpg" id="slide">
-          <button id="anterior" class="controle">Anterior</button>
-          <button id="proximo" class="controle">Próximo</button>
-        </div>
+        <h2>Sexta-feira, no Globo Repórter</h2>
+        <p>
+          <button class="botao-expandir-retrair" type="button">+</button>
+          Pariatur neque rerum fuga similique? Recusandae suscipit esse ex
+          eos corrupti, alias deserunt dignissimos cum laudantium dolorum
+          quo ut enim libero nam? Harum, illo! Ipsa fuga non sit placeat
+          sed, laudantium voluptatem nobis ratione laboriosam odio, magni
+          vel quibusdam dicta dolorem obcaecati temporibus. Explicabo, et quo?
+          Explicabo omnis amet sit debitis velit?
+        </p>
       </article>
     </main>
+    
+    <!-- katex: biblioteca para usar Latex para fórmulas matemáticas -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+    <!-- navegacao: código que faz a "navegação em abas" da página -->
     <script src="navegacao.js"></script>
-    <script src="exercicio2.js"></script>
+    <!-- inclua os arquivos dos exercícios aqui: -->
+
+
+
   </body>
 </html>

@@ -1,2 +1,2 @@
-// Faça o exercício dos parágrafos aqui
-// Este arquivo ainda não está incluído no arquivo HTML
+// Faça o exercício da equação de GRAVITAÇÃO UNIVERSAL aqui
+// Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML

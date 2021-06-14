@@ -5,6 +5,7 @@ body {
   background-size: 75%;
   font-family: "Lato", sans-serif;
   color: #fff;
+  font-size: 18px;
 }
 
 p {
@@ -28,7 +29,6 @@ body::after {
   bottom: 0;
   z-index: -1;
   background: transparent url(images/twinkling.png) repeat;
-  background-size: 20%;
   animation: move-twink-back 500s linear infinite;
 }
 
@@ -61,20 +61,24 @@ header * {
   animation: chegando-de-cima 700ms cubic-bezier(0.18, 0.62, 0.22, 1) 200ms 1 forwards;
 }
 
-header :nth-child(2n+1) {
+header :nth-child(2n) {
   animation-delay: 200ms;
 }
 
-header :nth-child(2n) {
+header :nth-child(2n+1) {
   animation-delay: 400ms;
 }
 
-header ul :nth-child(2n+1) {
+header ul :nth-child(3n+1) {
   animation-delay: 600ms;
 }
 
-header ul :nth-child(2n) {
+header ul :nth-child(3n+2) {
   animation-delay: 800ms;
+}
+
+header ul :nth-child(3n) {
+  animation-delay: 1000ms;
 }
 
 @keyframes chegando-de-cima {
@@ -148,6 +152,10 @@ header ul :nth-child(2n) {
   background-color: #d012ff;
 }
 
+#menu-principal li:nth-child(3) a::before {
+  background-color: #12ff59;
+}
+
 /* layout do conteúdo principal da página */
 main {
   padding: 1em;
@@ -159,6 +167,28 @@ main {
 
 .aba-conteudo.ativa {
   display: block;
+}
+
+/* estilos do exercício da gravitação */
+#gravitacao .colunas {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+#gravitacao .coluna {
+  flex: 1;
+}
+
+#gravitacao input {
+  width: 6em;
+}
+
+.controles {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-bottom: 1em;
 }
 
 /* estilos do exercício dos aliens */
@@ -191,36 +221,50 @@ main {
 /* estilos do exercício philae */
 #galeria {
   margin: 0 auto;
-}
-
-#galeria, #slide {
-  width: 400px;
-  height: 300px;
+  max-width: 700px;
 }
 
 #slide {
+  aspect-ratio: auto 739 / 415;
   border: 1px solid gray;
+  display: block;
+  max-width: 100%;
 }
 
-.controle {
+.navegar {
   width: 150px;
-  height: 45px;
-  padding: 6px 10px;
-  border: 1px solid #999;
-  background-image: linear-gradient(to bottom, #ddf, #bbe);
-  transition: all 100ms ease-out;
+  padding: 0.5em 0.5em;
+  margin-top: 2px;
+  font-size: 1em;
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: #999;
+  transition: all 100ms ease;
 }
-.controle:hover {
-  border-color: #aaa;
-  background-image: linear-gradient(to bottom, #eef, #ccf);
-  font-size: 120%;
+
+.navegar:hover {
+  color: white;
   cursor: pointer;
+}
+
+.navegar:active {
+  text-indent: 2px;
 }
 
 #anterior {
   float: left;
+  border-radius: 0 0 0 10px;
 }
 
 #proximo {
   float: right;
+  border-radius: 0 0 10px 0;
+}
+
+#anterior:hover {
+  transform: translateX(-5px);
+}
+
+#proximo:hover {
+  transform: translateX(5px);
 }
