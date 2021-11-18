@@ -1,11 +1,11 @@
-# cefet-web-space
+# Exploração Espacial 👽
 
 Uma página espacial.
 ![Página escura com fundo de estrelas mostrando o título de 'Exploração Espacial' e um texto com campos para preencher sobre a lei de gravitação universal](https://fegemo.github.io/cefet-web/images/cefet-web-space.webp)
 
 ## Atividade
 
-Esta atividade é composta de 2 exercícios.
+Esta atividade é composta de 3 exercícios.
 
 
 ### Exercício 1: cálculo de fórmula
@@ -17,6 +17,17 @@ esse arquivo ainda não foi incluído na página.
 Para isso, você deve associar um evento de `click` ao botão `#calcular` e,
 nessa função, calcular o valor da força gravitacional e preencher o valor
 de `#resultado`.
+
+Lembre-se que você pode recuperar/definir o valor de
+um atributo HTML de um elemento assim:
+
+```js
+// pegando valor
+let valor = algumEl.nomeDoAtributo
+
+// definindo
+algumEl.nomeDoAtributo = 'novo valor'
+```
 
 
 ### Exercício 2: galeria de imagens
