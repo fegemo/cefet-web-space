@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="images/favicon.png">
+    <!-- navegacao: código que faz a "navegação em abas" da página -->
+    <script defer src="navegacao-em-abas.js"></script>
+    <!-- katex: biblioteca para usar Latex para fórmulas matemáticas -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
   </head>
   <body>
     <header>
@@ -88,80 +93,61 @@
         <h1>Sobre Aliens</h1>
         <h2>De onde eles vêm</h2>
         <p>
-          <button class="botao-expandir-retrair" type="button">+</button>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in
-          dignissim augue. Nunc a erat ac nisl imperdiet dapibus sit amet
-          in ipsum. Suspendisse scelerisque in dui in placerat. Praesent
-          ornare est dolor, at pharetra mauris finibus in. Aenean vulputate,
-          massa ut molestie tincidunt, eros mi pulvinar sem, lobortis
-          efficitur dolor turpis eget velit. Donec non metus ante. Nam
-          quis quam quis magna laoreet ultricies. Duis non ex maximus,
-          congue augue nec, lobortis magna. Sed et tristique ex, non iaculis
-          libero. In tincidunt dolor at metus lacinia semper eu quis
-          enim. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos.
+          <button class="botao-expandir-retrair">+</button>
+          Aliens são seres pouco conhecidos pela raça humana ainda. Mesmo
+          depois de diversos anos de estudos e diversos encontros nós ainda
+          sabemos muito pouco. Algo que temos certeza é que
+          eles vêm de outras galáxias e planetas que até então eram
+          desconhecidos na nossa própria galáxia. Há vestigios e estudos que
+          dizem que alguns tipos de aliens vêm até mesmo de diferentes tempos,
+          sendo eles viajantes cronológicas (uma coisa meio teoria dos
+          <a href="https://pt.wikipedia.org/wiki/Reptilianos">reptilianos</a>).
+          Estes textos científicos extremamente confiáveis foram gentilmente 
+          elaborados pela aluna <strong>Stella Maris</strong> (INF-1A de 2021).
         </p>
         <h2>O que eles querem</h2>
         <p>
-          <button class="botao-expandir-retrair" type="button">+</button>
-          Cras velit mauris, suscipit ac blandit sit amet, scelerisque eget
-          sem. Aenean purus leo, tincidunt consectetur libero id, euismod
-          ultrices diam. Nam erat purus, faucibus ut nisl in, facilisis
-          venenatis mauris. Praesent maximus vulputate euismod. Fusce
-          eget lacinia nisi. Aenean eu ornare leo. Maecenas risus justo,
-          ornare ac orci quis, ultrices tincidunt tortor. Nunc sodales
-          magna non lorem bibendum sollicitudin. In porta, velit cursus
-          consectetur finibus, diam magna porta lorem, posuere ullamcorper
-          eros nulla auctor nibh. Ut fermentum diam magna, eu luctus libero
-          mattis vitae. Sed laoreet lorem vel orci dictum, eu sodales nisi
-          scelerisque. Maecenas vestibulum dapibus fermentum. Donec auctor
-          mauris nulla, eget sagittis sem molestie nec.
+          <button class="botao-expandir-retrair">+</button>
+          Outra coisa que não sabemos são as intenções desses seres.
+          Alguns estão nos observando constatemente, alguns fazem
+          estudos, outros fazem trocas, porém temos a certeza que
+          tem alguns por aí que nos atacariam e poderiam trazer o
+          caos mundial, porém ainda não há registro de ataques
+          alienígenas. Os que fazem trocas são os mais amigáveis e já
+          estabelecemos acordos de trocas, proteção e de amizade. Atualmente
+          convivemos de forma bem pacífica com esse grupo. Os observadores,
+          não sabemos muito sobre eles, geralmente são os mesmos que nos
+          tem estudado, porém nunca levaram nenhum humano, apenas plantas
+          e alguns animais. Esses também não nos causam maléficios,
+          apenas temos uma relação de observação e de estudos.
         </p>
         <h2>Para onde eles vão</h2>
         <p>
-          <button class="botao-expandir-retrair" type="button">+</button>
-          Vestibulum auctor orci lacus, sit amet pretium mauris viverra
-          nec. Nullam eu maximus augue. Phasellus in metus sit amet sem dapibus
-          iaculis ut at odio. Cras turpis dui, lacinia non posuere quis,
-          posuere id mi. Etiam nisi erat, aliquet at libero at, porta pretium
-          ligula. Duis faucibus massa id metus venenatis posuere ac vitae
-          nulla. Praesent quis dui non metus hendrerit pretium. Nunc sit amet
-          purus dapibus, consequat augue a, pulvinar mi. Morbi fermentum
-          egestas dignissim. Suspendisse vulputate nibh sem, a aliquet
-          lorem porta ac.
+          <button class="botao-expandir-retrair">+</button>
+          Conhecemos bem apenas uma das 50 espécies já encontradas e temos
+          registros de suas atividades espaciais. O restante são completamente
+          estranhos pra nós, apesar de não sermos tanto pra eles. Atualmente,
+          os que tem estado por aqui apenas nos mostram que viagens espaciais
+          são possíveis, porém não temos equipamentos suficientes para isso e
+          para monitoramento de atividades extraterrestres.
         </p>
         <h2>O que comem</h2>
         <p>
-          <button class="botao-expandir-retrair" type="button">+</button>
-          Quisquam veritatis dicta eligendi fuga asperiores tenetur, laborum 
-          repudiandae consequatur dignissimos corporis excepturi minus voluptas
-          consequuntur et dolorem odio optio ab error. Soluta vitae eaque,
-          blanditiis at autem dolore odio, aspernatur animi quibusdam nesciunt
-          debitis necessitatibus quod eius minus eos laborum asperiores culpa
-          obcaecati. Facilis excepturi obcaecati alias nisi maiores adipisci
-          rem, aliquid voluptatem dolor blanditiis quibusdam itaque neque
-          numquam et velit illum fuga magnam eius, dicta ut omnis.
-          Iure dolore accusamus natus necessitatibus?
+          <button class="botao-expandir-retrair">+</button>
+          Não sabemos exatamente o que os aliens comem, mas há indícios de que
+          eles podem se alimentar de substâncias químicas encontradas em outros
+          planetas. Alguns estudos sugerem que eles podem consumir energia
+          solar ou até mesmo matéria escura.
         </p>
         <h2>Sexta-feira, no Globo Repórter</h2>
         <p>
-          <button class="botao-expandir-retrair" type="button">+</button>
-          Pariatur neque rerum fuga similique? Recusandae suscipit esse ex
-          eos corrupti, alias deserunt dignissimos cum laudantium dolorum
-          quo ut enim libero nam? Harum, illo! Ipsa fuga non sit placeat
-          sed, laudantium voluptatem nobis ratione laboriosam odio, magni
-          vel quibusdam dicta dolorem obcaecati temporibus. Explicabo, et quo?
-          Explicabo omnis amet sit debitis velit?
-        </p>
+          <button class="botao-expandir-retrair">+</button>
+          A Globo Repórter vai exibir uma matéria especial sobre aliens
+          na próxima sexta-feira. Não perca!
+        </p>        
       </article>
     </main>
     
-    <!-- katex: biblioteca para usar Latex para fórmulas matemáticas -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-    
-    <!-- navegacao: código que faz a "navegação em abas" da página -->
-    <script src="navegacao.js"></script>
     <!-- inclua os arquivos dos exercícios aqui: -->
 
 

@@ -1,4 +1,4 @@
-// Este arquivo contém o código para fazer as "abas" funcionarem.
+  // Este arquivo contém o código para fazer as "abas" funcionarem.
 // Quando o usuário clica em uma aba, o <article> que contém o id igual
 // ao href da aba clicada será exibido. Por exemplo:
 //
@@ -34,11 +34,12 @@ itensDoMenu.forEach(el => {
 });
 
 // verifica se, ao carregar a página, havia um #alguma-coisa na URL da
-// página. Em caso afirmativo, se for #aliens ou #philae, ativa as suas
+// página. Em caso afirmativo, se for #aliens ou #osiris-rex, ativa as suas
 // respectivas abas
 if (location.hash) {
   const hrefDosItensDeMenu = Array.from(itensDoMenu).map(el => el.href);
-  if (hrefDosItensDeMenu.indexOf(location.hash)) {
+  const idsApontadosPelosLinks = hrefDosItensDeMenu.map(href => href.substring(href.lastIndexOf('#')))
+  if (idsApontadosPelosLinks.includes(location.hash)) {
     // exibe o artigo que tem o id do link clicado
     exibeArtigo(location.hash);
   }

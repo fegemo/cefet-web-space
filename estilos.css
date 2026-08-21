@@ -193,17 +193,13 @@ main {
 
 /* estilos do exercício dos aliens */
 #aliens p {
-  white-space: nowrap;
   height: 1.2em;
   font-size: 1em;
   line-height: 1.2em;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 #aliens p.expandido {
-  white-space: normal;
   height: auto;
 }
 
@@ -218,7 +214,7 @@ main {
   border-width: 1px;
 }
 
-/* estilos do exercício philae */
+/* estilos do exercício osiris-rex */
 #galeria {
   margin: 0 auto;
   max-width: 700px;
@@ -267,4 +263,30 @@ main {
 
 #proximo:hover {
   transform: translateX(5px);
+}
+
+
+/* Media queries para larguras menores */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+  #menu-principal li {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .navegar {
+    max-width: 120px;
+  }
 }

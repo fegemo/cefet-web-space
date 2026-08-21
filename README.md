@@ -57,7 +57,7 @@ const imagens = [
 Além do atributo `src`, defina também o `alt` com o texto descritivo.
 Para acessar uma propriedade de um objeto, lembre-se no [FAQ](#faq).
 E também repare que as imagens estão hospedadas em um servidor web.
-Portanto, seus caminhos devem ser concatenas (servidor e nome) para
+Portanto, seus caminhos devem ser concatenados (servidor e nome) para
 que sejam encontradas.
 
 Por fim, faça com que a galeria seja "circular": ao ultrapassar a 
@@ -77,9 +77,8 @@ de forma completa, em vez de apenas a primeira linha:
 ```css
 /* estilo inicial do parágrafo */
 p {
-  height: 1em;            /* parágrafo com altura de 1 linha apenas */
+  height: 1em;              /* parágrafo com altura de 1 linha apenas */
   overflow: hidden;         /* oculta o que não couber no parágrafo */
-  text-overflow: ellipsis;  /* coloca reticências ao final od texto */
 }
 
 /* estilo quando <p class="expandido"> */
